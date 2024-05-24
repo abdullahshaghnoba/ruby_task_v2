@@ -1,0 +1,16 @@
+<div class="container">
+<%= form_with model: @book do |form| %>
+    <div>
+        <%= form.label :title %><br/>
+        <%= form.text_field :title, class: 'text-field' %><br/>
+    </div>
+    <div>
+        <%= form.label :release_date %><br/>
+        <%= form.text_field :release_date, class: 'text-field' %><br/>
+    </div>
+
+    <div>
+        <%= form.submit 'Submit', class:'button' %>
+    </div>
+<% end %>
+</div>

@@ -1,0 +1,9 @@
+<% if author_signed_in? %>
+  <p>Welcome, <%= current_author.name %>!</p>
+  <%= button_to 'Sign out', destroy_author_session_path, method: :delete, class:'button' %>
+  <%= link_to 'My Details', author_path(current_author), class: 'button' %>
+  <%= link_to 'Books', books_path, class: 'button' %>
+<% else %>
+  <%= link_to 'Sign In', new_author_session_path, class: 'button' %>
+  <%= link_to 'Sign Up', new_author_registration_path, class: 'button' %>
+<% end %>

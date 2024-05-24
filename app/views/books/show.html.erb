@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Book details</h1><br/>
+
+<h3><%= "Book ID: #{@books.id}" %></h3>
+<h3><%= "Book title: #{@books.title}" %></h3>
+<h3><%= "Book release_date: #{@books.release_date}" %></h3>
+<h3><%= "Book auther_id: #{@books.author_id}" %></h3>
+<div>
+    <%= link_to 'Back', books_path, class:'button' %> 
+    <% if @books.author == current_author %>
+        <%= link_to 'Edit', edit_book_path(@books), class:'button' %>
+    <% end %>
+</div>
+</div>
